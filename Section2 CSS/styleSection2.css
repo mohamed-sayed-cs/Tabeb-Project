@@ -1,0 +1,42 @@
+/* Section2 */
+.section2
+{
+    padding: 40px 70px;
+}
+.left-section
+{
+    width: 40%;
+    transform: scalex(0.8) scaleY(1.2);
+}
+.left-section img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+.right-section
+{
+    width: 60%;
+    position: relative;
+    top: -60px;
+    right: 20px;
+}
+.About
+{
+    color: #13C5DD;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    position: relative;
+    top: -10px;
+}
+.right-section h1
+{
+    color: #1D2A4D;
+    font-size: 56px;
+    line-height: 67px;
+    font-weight: 700;
+}
+.para
+{
+    color: #848E9F;
+}
