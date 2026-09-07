@@ -39,3 +39,10 @@ p {
 
     font-size: xx-large;
 }
+
+.footer-col p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; /* =8px */
+    color: black; 
+}
+
