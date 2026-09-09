@@ -1,0 +1,48 @@
+.ContactSection
+{
+    background-color: #e5f3fa;
+}
+.ContentSection
+{
+    position: absolute;
+    left: 6rem;
+    top: 12rem;
+}
+.paraQus
+{
+    color: #11a2d7;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    border-bottom: 6px solid #DEE2E6;
+}
+.PleaseH1
+{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.DivLogo
+{
+    background-color: #11a2d7;
+    border-radius: 50%;
+    width: 25%;
+}
+.DivArea
+{
+    background-color: #EFF5F9;
+    height: 150px;
+    width: 25%;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+spam
+{
+    left: 100px;
+}
+.message
+{
+    font-weight: 700;
+    line-height: 19px;
+}
