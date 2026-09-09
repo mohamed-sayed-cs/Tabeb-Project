@@ -64,7 +64,9 @@ header {
     padding: 15px 5%;
     background-color: #ffff;
     box-shadow: 0 2px 10px rgba(19, 26, 47, 0.06);
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 
@@ -108,6 +110,7 @@ header {
     padding-bottom: 5px;
     position: relative;
     transition: color 0.3s ease;
+    right: -400px;
 }
 
 .navigation a:hover{
@@ -131,6 +134,9 @@ header {
     font-weight: 600;
     font-size: 15px;
     transition: background 0.3s ease;
+    position: absolute;
+    top: 0;
+    right: 30px;
 }
 
 .login-btn a:hover {
@@ -281,7 +287,7 @@ section{
 body{
     padding:0px;
     margin:0px;
-    background-color:#e5f3fa23;
+    background-color:#97ced8;
     height:100vh;
 }
     /* edite card */
