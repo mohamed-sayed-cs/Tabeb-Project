@@ -1,6 +1,7 @@
 .ContactSection
 {
     background-color: #e5f3fa;
+    height: 150vh;
 }
 .ContentSection
 {
@@ -45,4 +46,25 @@ spam
 {
     font-weight: 700;
     line-height: 19px;
+}
+form
+{
+    position: relative;
+    top: 150px;
+    background-color: #e5f3fa;
+}
+#Name
+{
+    width: 320px;
+    height: 30px;
+}
+#Text
+{
+    width: 50%;
+    height: 150px;
+}
+.BuSend
+{
+    width: 50%;
+    height: 40px;
 }

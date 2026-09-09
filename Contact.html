@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- Start Contact-->
-    <section class="ContactSection position-relative vh-100">
+    <section class="ContactSection position-relative">
         <div class="container ContentSection">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <p class="text-uppercase paraQus">Any Questions?</p>
@@ -36,9 +36,20 @@
                     <p class="message">info@gmail.com</p>
                 </div>
             </div>
+            <form class="d-flex flex-column justify-content-center align-items-center gap-3">
+                <div class="d-flex gap-5">
+                    <input placeholder="Your Name" id="Name">
+                    <p id="errorname" class="text-danger"></p>
+                    <input placeholder="Your Phone" id="Phone">
+                    <p id="errorphone" class="text-danger"></p>
+                </div>
+                <textarea id="Text" placeholder="Message"></textarea>
+                <button class="BuSend bg-primary text-white" type="button" onclick="onInput()">Send Message</button>
+            </form>
         </div>
     </section>
     <!-- End Contact-->
+     <script src="./Script/Form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
