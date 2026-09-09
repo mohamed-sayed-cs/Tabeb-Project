@@ -1,0 +1,32 @@
+body{
+    padding:0px;
+    margin:0px;
+    background-color:#090d0f;
+    height:100vh;
+}
+    /* edite card */
+.card{
+    max-width:200px;
+    margin:0;
+}
+.card img{
+    height:100px;
+    object-fit:cover;
+}
+        /* card-transition */
+.card{
+    border:none;
+    box-shadow:0px 3px 7px #1a1a1b14;
+    transition: all .5s ease;
+}
+.card:hover{
+    box-shadow:0px 5px 10px rgb(0,0,0,0,.50);
+    transform: translatey(-14px);
+}
+.card-body2 .card-text{
+    color:rgb(45, 38, 38);
+    font-size:10px;
+    font-weight:bolder;
+    padding:8px
+    
+}
