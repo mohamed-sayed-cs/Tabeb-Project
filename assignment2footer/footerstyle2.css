@@ -1,0 +1,134 @@
+/* الإعدادات الأساسية للفوتر */
+footer {
+    background-color:#1a233a ; /* اللون الكحلي الغامق */
+    color: #a0a6b5; /* لون الخط الرمادي الفاتح */
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    bottom: 0;
+position: fixed;
+width: 100%;
+}
+
+/* حاوية الأعمدة الأربعة */
+footer .footer-container /* (nesting */ {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    max-width: 1200px; /* for responsability */
+    margin: auto;
+    gap: 2rem;
+}
+
+/* إعطاء مساحة متساوية لكل عمود */
+footer.footer-col {
+    flex: 1;
+}
+
+/* تنسيق العناوين (لون سماوي) */
+footer h3 {
+    color: #13c5dd; 
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* تنسيق فقرة الوصف
+ footer.desc {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+} */
+
+/* بيانات التواصل والأيقونات */
+.contact-details p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    color: #13c5dd;
+}
+
+/* تنسيق القوائم والروابط */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #a0a6b5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #13c5dd;
+}
+
+/* تنسيق النشرة البريدية (Newsletter) */
+.newsletter {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.newsletter button {
+    background-color: #13c5dd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* تنسيق أيقونات السوشيال ميديا */
+.follow-title {
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #13c5dd;
+    color: white;
+    border-radius: 50%; /* بيخليها دايرة */
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: #13c5dd;
+}
+
+/* شريط حقوق النشر السفلي */
+.footer-bottom {
+    background-color: #111827; /* أغمق شوية من الخلفية الأساسية */
+    text-align: left;
+    padding: 1.5rem 10%;
+    color: #a0a6b5;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
