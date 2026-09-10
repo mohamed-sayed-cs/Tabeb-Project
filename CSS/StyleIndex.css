@@ -287,16 +287,16 @@ section{
 body{
     padding:0px;
     margin:0px;
-    background-color:#97ced8;
+    background-color:#d9e8eb;
     height:100vh;
 }
     /* edite card */
 .card{
-    max-width:200px;
+    max-width:300px;
     margin:0;
 }
 .card img{
-    height:100px;
+    height:150px;
     object-fit:cover;
 }
         /* card-transition */
@@ -311,7 +311,7 @@ body{
 }
 .card-body2 .card-text{
     color:rgb(45, 38, 38);
-    font-size:10px;
+    font-size:12px;
     font-weight:bolder;
     padding:8px
     
