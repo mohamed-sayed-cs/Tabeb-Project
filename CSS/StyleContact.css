@@ -1,3 +1,160 @@
+:root {
+    --royal-blue: #2e4493;
+    --light-blue: #11a2d7;
+    --dark-navy: #131a2f;
+    --light-bg: #e5f3fa;
+
+    --white: #ffffff;
+    --text-gray: #64748b;
+    --border: #dbe7ee;
+
+    --shadow-sm: 0 5px 20px rgba(19, 26, 47, 0.06);
+    --shadow-md: 0 15px 40px rgba(19, 26, 47, 0.10);
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: #ffff;
+    color: #131a2f;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+/* /////////////////////////// */
+
+
+
+
+/* Start Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffff;
+    box-shadow: 0 2px 10px rgba(19, 26, 47, 0.06);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    background-color: #2e4493;
+    color: var(--white);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #2e4493;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Navigation Links Styling */
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #131a2f;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+    right: -400px;
+}
+
+.navigation a:hover{
+    color: #11a2d7;
+}
+
+
+/* Sign In Button */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn a {
+    text-decoration: none;
+    background-color: #2e4493;
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.login-btn a:hover {
+    background-color: #11a2d7;
+}
+
+/* Menu Toggle Button (Default Hidden) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* End Navbar */
+
+
+
+
+/* /////////////////// */
 .ContactSection
 {
     background-color: #e5f3fa;
