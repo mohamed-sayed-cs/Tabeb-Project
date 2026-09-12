@@ -45,16 +45,16 @@
 //////////////////////////////////////
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", (e)=> {
 
-    event.preventDefault();
+    e.preventDefault();
 
     const name = document.getElementById("name");
     const phone = document.getElementById("phone");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
 
-    const nameRegex = /^[A-Z][a-z]+(?: [A-Z][a-z]+){1,3}$/;
+    const nameRegex = /^[A-Z][a-z]+( [A-Z][a-z]+){1,3}$/;
     const phoneRegex = /^01[0125][0-9]{8}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
