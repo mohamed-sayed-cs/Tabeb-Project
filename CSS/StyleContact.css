@@ -1,4 +1,4 @@
-/* :root {
+:root {
     --royal-blue: #2e4493;
     --light-blue: #11a2d7;
     --dark-navy: #131a2f;
@@ -35,7 +35,7 @@ body {
     font-family: "Cairo", sans-serif;
     background: #ffff;
     color: #131a2f;
-    line-height: 1.7;
+    /* line-height: 1.7; */
 }
 
 a {
@@ -48,14 +48,12 @@ button,
 input,
 select {
     font-family: inherit;
-} */
+}
 /* /////////////////////////// */
 
 
 
-
-/* Start Navbar */
-/* header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,10 +90,10 @@ select {
     color: #2e4493;
     text-decoration: none;
     letter-spacing: 1px;
-} */
+}
 
 /* Navigation Links Styling */
-/* .navigation {
+.navigation {
     display: flex;
     gap: 30px;
 }
@@ -108,16 +106,16 @@ select {
     padding-bottom: 5px;
     position: relative;
     transition: color 0.3s ease;
-    right: -400px;
+    right: -250px;
 }
 
 .navigation a:hover{
     color: #11a2d7;
-} */
+}
 
 
 /* Sign In Button */
-/* .right-section {
+.right-section {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -133,21 +131,21 @@ select {
     font-size: 15px;
     transition: background 0.3s ease;
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 30px;
 }
 
 .login-btn a:hover {
     background-color: #11a2d7;
-} */
+}
 
 /* Menu Toggle Button (Default Hidden) */
-/* .menu-toggle {
+.menu-toggle {
     display: none;
     font-size: 24px;
     color: var(--primary-color);
     cursor: pointer;
-} */
+}
 
 /* End Navbar */
 
@@ -163,6 +161,7 @@ select {
     color: #11a2d7;
     font-weight: 700;
     font-size: 18px;
+    margin-top: 50px;
     margin-bottom: 8px;
 }
 
