@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/StyleAboutPage.css">
+</head>
+
+<body>
+
+    <!-- Start NavBar -->
+     <header>
+        <div class="logo-icon">
+            <div class="logo-box">
+                <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <a href="../index.html" class="logo">TABEB</a>
+        </div>
+
+        <nav class="navigation">
+            <a href="../index.html#home" class="active">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#services">Specialties</a>
+            <a href="../index.html#services">Services</a>
+            <a href="./Contact.html"">Contact</a>
+        </nav>
+
+        <div class="right-section">
+            <div class="login-btn">
+                <a href="./login.html">Sign In</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- End NavBar -->
+
+    <!-- Start About Section -->
+    <section class="about-page">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+                <p class="small-title">ABOUT US</p>
+                <h1 class="Large-Text">Get to Know More About Tabeb</h1>
+                <p class="text-muted">
+                    Tabeb helps you find qualified doctors and book medical appointments easily.
+                </p>
+            </div>
+
+            <div class="row align-items-center about-block">
+
+                <div class="col-12 col-lg-6">
+
+                    <div id="specialtiesCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="../Images/Cardiology.jpg" class="d-block w-100 slider-img" alt="Cardiology">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="../Images/Dental.jpg" class="d-block w-100 slider-img" alt="Dentistry">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="../Images/Neurology.jpg" class="d-block w-100 slider-img" alt="Dermatology">
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#specialtiesCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#specialtiesCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6 about-text">
+
+                    <p class="small-title">MEDICAL SPECIALTIES</p>
+
+                    <h2>Find The Right Medical Specialty</h2>
+
+                    <p>
+                        Tabeb provides different medical specialties to help patients
+                        find the right doctor for their needs.
+                    </p>
+
+                    <p>
+                        You can explore different specialties, check available doctors,
+                        view their information and choose the doctor that suits you.
+                    </p>
+
+                    <a href="../index.html#services" class="btn btn-primary">
+                        Explore Specialties
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="row align-items-center about-block">
+
+                <div class="col-12 col-lg-6">
+
+                    <div id="doctorsCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="../Images/doctor1.jpg" class="d-block w-100 slider-img" alt="Doctor. Ahmed Mohamed">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="../Images/About.jpg"  class="d-block w-100 slider-img" alt="Doctor. Tarek Saeed">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="../Images/Doctor5.jpg"  class="d-block w-100 slider-img" alt="Doctor. Omar Farouk">
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-control-prev" type="button"
+                            data-bs-target="#doctorsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button"
+                            data-bs-target="#doctorsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-6 about-text">
+
+                    <p class="small-title">OUR DOCTORS</p>
+
+                    <h2>Meet Our Qualified Doctors</h2>
+                    <p>
+                        Our website makes it easy for patients to discover doctors
+                        from different medical specialties.
+                    </p>
+
+                    <p>
+                        You can view the doctor's name, specialty, location, rating,
+                        examination price and available appointments.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">
+                        Find A Doctor
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="rating-section text-center">
+
+                <i class="fa-solid fa-star rating-icon"></i>
+
+                <h2>What Do You Think About Tabeb?</h2>
+
+                <p class="text-muted">
+                    Your opinion helps us improve our website and provide
+                    a better experience for<br> patients.
+                </p>
+
+                <a href="#" class="btn btn-primary btn-lg">
+                    Rate Our Website
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- End About Section -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
