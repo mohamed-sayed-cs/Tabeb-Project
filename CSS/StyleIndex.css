@@ -386,6 +386,7 @@ footer .footer-container /* (nesting */ {
     max-width: 1200px; /* for responsability */
     margin: auto;
     gap: 2rem;
+    flex-wrap: wrap; /* ← عشان الاعمدة تلف فالمساحة تفضل زى ما هى*/
 }
 footer.footer-col {
     flex: 1;
@@ -446,6 +447,43 @@ footer h3 {
     border: none;
     outline: none;
     width: 100%;
+}
+/* ضبط الفوتر للشاشات المتوسطة (التابلت والآيباد) */
+@media (max-width: 992px) {
+    footer .footer-container {
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    footer .footer-col {
+        flex: 1 1 45%; /* يظهر كل عمودين بجانب بعض بدلاً من 4 أعمدة مضغوطة */
+    }
+}
+
+/* ضبط الفوتر للشاشات الصغيرة (الموبايل) */
+@media (max-width: 600px) {
+    footer .footer-container {
+        flex-direction: column; /* تحويل ترتيب الأعمدة إلى رأسي بدلاً من أفقي */
+        padding: 2rem 1rem;
+        gap: 1.8rem;
+        text-align: center; /* لتنسيق النصوص والأيقونات في المنتصف */
+    }
+
+    footer .footer-col {
+        width: 100%;
+    }
+
+    /* توسيط أيقونات التواصل والتفاصيل على الموبايل */
+    .contact-details p, 
+    .footer-links a {
+        justify-content: center;
+    }
+
+    /* ضبط نموذج النيوزليتر ليشغل كامل العرض */
+    .newsletter {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .newsletter button {
