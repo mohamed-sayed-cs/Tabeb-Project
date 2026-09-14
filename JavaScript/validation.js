@@ -1,6 +1,6 @@
 
 
-console.log("ملف الجافا سكريبت شغال ومربوط بنجاح! 🚀");
+//console.log("ملف الجافا سكريبت شغال ومربوط بنجاح! 🚀");
 
 document.addEventListener("DOMContentLoaded", function () {
     // 1. لو دوسنا enter
@@ -17,15 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // قواعد الفحص (Regex)
+    (Regex)
     let phoneRegex = /^[0-9]+$/; // أرقام فقط
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/; // إيميل صحيح
 
     
     registerForm.addEventListener("submit", function (e) {
-        e.preventDefault(); // السطر ده بيمنع إعادة تحميل الصفحة (الريفريش)
+        e.preventDefault(); 
         
-        console.log("بيتم فحص البيانات دلوقتي...");
+        console.log(".....");
 
         // فحص الاسم
         if (userName.value.trim() === "") {
