@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User - Sign Up</title>
+   <link rel="stylesheet" href="../CSS/newuser.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="signup-form">
+    <h2>New User</h2>
+    <form id="registerForm"novalidate>
+        <!-- نوع المستخدم -->
+        <div class="radio-group">
+            <label><input type="radio" name="user-type" value="doctor" checked> Doctor</label>
+            <label><input type="radio" name="user-type" value="patient"> Patient</label>
+        </div>
+
+        <!-- Full Name (خانة واحدة فقط) -->
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="userName" placeholder="Full Name" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="input-group">
+            <label>Phone</label>
+            <input type="tel" id="userPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="userEmail" placeholder="Email Address" required>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="userPass" placeholder="Password" required>
+        </div>
+
+        <!-- خلينى نوع الزرار button بدل submit عشان نتحكم فيه بـ JS -->
+        <button type="submit" id="submitBtn" class="submit-btn">Sign Up</button>
+    </form>
+</div>
+
+<!-- 1. مكتبة SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- 2. ربط ملف الفاليديشن بالمسار المضبوط -->
+    <script src="../JavaScript/validation.js"></script>
+
+</body>
+</html>

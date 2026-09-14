@@ -78,3 +78,57 @@ body {
 .login-form button:hover {
     background-color: #0fb2c8;
 }
+
+.role-selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.role-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #a0a6b5;
+    transition: 0.3s;
+}
+
+.role-option:hover {
+    color: #fff;
+}
+
+.role-option input[type="radio"] {
+    accent-color: #13c5dd;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.role-option input[type="radio"]:checked + .role-text {
+    color: #13c5dd;
+    font-weight: bold;
+}
+.role-option input {
+    accent-color: #13c5dd;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+.role-option:has(input:checked) {
+    color: #13c5dd;
+    font-weight: bold;
+}
+.role-option input {
+    accent-color: #13c5dd;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
