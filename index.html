@@ -39,15 +39,15 @@
             <a href="#services">Services</a>
             <a href="./Pages/Contact.html"">Contact</a>
         </nav>
-
-        <div class="right-section">
-            <div class="login-btn">
-                <a href="./Pages/login.html">Sign In</a>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+<div class="right-section" style="display: flex !important; align-items: center !important; gap: 10px !important;">
+    <!-- زرار New User -->
+    <a href="./Pages/newuser.html" class="btn btn-outline-primary" style="white-space: nowrap; margin: 0 !important;">New User</a>
+    
+    <!-- زرار Sign In (شيلنا الـ div القديم وخليناه زرار مباشر عشان الـ Flex اشتغل صح) -->
+    <a href="./Pages/login.html" class="btn btn-primary" style="white-space: nowrap; margin: 0 !important;">Sign In</a>
+</div>
+</div>
+       
         <button class="toggle-button" onclick="theme()"><i class="fa-solid fa-moon"></i></button>
     </header>
     <!-- End NavBar -->
@@ -305,3 +305,6 @@
     <script src="./JavaScript/drakMode.js"></script>
   </body>
 </html>
+
+
+

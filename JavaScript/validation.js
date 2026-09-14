@@ -1,9 +1,9 @@
-// بنمسك العناصر من الـ HTML
+
 
 console.log("ملف الجافا سكريبت شغال ومربوط بنجاح! 🚀");
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. هنمسك الفورم كله عشان لو دسنا Enter يشتغل
+    // 1. لو دوسنا enter
     let registerForm = document.getElementById("registerForm");
     
     let userName = document.getElementById("userName");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let phoneRegex = /^[0-9]+$/; // أرقام فقط
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/; // إيميل صحيح
 
-    // 2. هنراقب الفورم لما يتعمله Submit
+    
     registerForm.addEventListener("submit", function (e) {
         e.preventDefault(); // السطر ده بيمنع إعادة تحميل الصفحة (الريفريش)
         
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // فحص رقم التليفون (حطينا علامة التعجب ! هنا عشان يدي إيرور لو مش أرقام)
+      //فحص رقم التليفون
         if (!phoneRegex.test(userPhone.value.trim())) {
             Swal.fire({
                 icon: "error",
