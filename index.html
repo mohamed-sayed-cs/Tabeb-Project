@@ -25,6 +25,8 @@
         }
     </script>
 
+
+
     <!-- Start NavBar -->
     <header style="display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; padding: 15px 5% !important;">
    <div class="logo-icon" style="display: flex; align-items: center; gap: 10px;">
@@ -108,6 +110,24 @@
             <a class="btn btn-primary btn-lg mt-4" href="./Pages/AboutPage.html" role="button">About Us</a>
         </div>
     </section>
+
+
+    <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navigationMenu = document.getElementById("navigation-menu");
+
+    mobileMenu.addEventListener("click", function () {
+        navigationMenu.classList.toggle("active");
+    });
+
+    const navigationLinks = navigationMenu.querySelectorAll("a");
+
+    navigationLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navigationMenu.classList.remove("active");
+        });
+    });
+    </script>
     <!-- End About Section -->
 
     <!-- Start Services -->

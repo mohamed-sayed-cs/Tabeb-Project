@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 :root {
   
@@ -28,7 +28,7 @@
 
 
     /* start-darkMode */
-body.dark-mode {
+ body.dark-mode {
     --bg-nav: #0a0a0a;         
     --color-btn: #eff4fd;    
     --btn-color: #000000;  
@@ -57,9 +57,9 @@ body.dark-mode {
     background: none;
     border:none;
     color: var(--btn-color2);
-}
+} 
 
-         /* end-darkMode-btn */
+/* end-darkMode-btn */
 
 * {
     margin: 0;
@@ -79,9 +79,9 @@ body {
     background: #ffff;
     color: #131a2f;
     /* line-height: 1.7; */
-}
+ } 
 
-a {
+ a {
     text-decoration: none;
     color: inherit;
 }
@@ -91,14 +91,14 @@ button,
 input,
 select {
     font-family: inherit;
-}
+} 
 /* /////////////////////////// */
 
 
 
 
 /* Start Navbar */
-header {
+ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,12 +138,12 @@ header {
 }
 
 /* Navigation Links Styling */
-.navigation {
+ .navigation {
     display: flex;
     gap: 30px;
 }
 
-.navigation a {
+ .navigation a {
     text-decoration: none;
     color: var(--font-colornav);
     font-weight: 600;
@@ -152,21 +152,21 @@ header {
     position: relative;
     transition: color 0.3s ease;
     right: -400px;
-}
+} 
 
 .navigation a:hover{
     color: #11a2d7;
-}
+} 
 
 
 /* Sign In Button */
-.right-section {
+ .right-section {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.login-btn a {
+ .login-btn a {
     text-decoration: none;
     background-color: var(--color-btn);
     color: var(--btn-color);
@@ -178,25 +178,25 @@ header {
     position: absolute;
     top: 0;
     right: 30px;
-}
+} 
+
+
 
 .login-btn a:hover {
     background-color: #11a2d7;
-}
+} 
 
 /* Menu Toggle Button (Default Hidden) */
-.menu-toggle {
+ .menu-toggle {
     display: none;
     font-size: 24px;
     color: var(--primary-color);
-    cursor: pointer;
-}
+    cursor: pointer; 
+ } 
 
 /* End Navbar */
 
 /* /////////////////////////// */
-
-
 
 /* Start Home Section */
 #home{
@@ -212,13 +212,15 @@ header {
     background-repeat: no-repeat;
     height: 100vh;
 }
-.main h1{
+ .main h1{
     color: var(--font-colorbg);
     font-size: 70px;
     font-weight: 700;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+} 
+
+
 
 .main h2{
     color: var(--font-colorbg);
@@ -275,6 +277,9 @@ header {
     box-shadow: 0 8px 20px rgba(17, 162, 215, 0.25);
 }
 /* End Home Section */
+
+
+
 
 
 
@@ -490,50 +495,3 @@ footer h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* End Footer */
-header {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 15px 30px !important;
-    box-sizing: border-box !important; /* ده السطر السحري اللي بيمنع خروج العناصر بره الشاشة */
-    position: relative !important;
-}
-
-header .navigation {
-    order: 2 !important;
-    position: static !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px !important;
-    margin-left: auto !important;
-    margin-right: 450px !important;
-}
-
-
-header .navigation a {
-    text-decoration: none !important;
-    color: #333 !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    transition: color 0.3s ease !important;
-    cursor: pointer !important;
-}
-
-
-
-/* التلوين بالأزرق فقط عند الوقوف بالماوس */
-header .navigation a:hover {
-    color: #007bff !important;
-}
-
-header .right-section {
-    order: 1 !important;
-    position: static !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    margin-left: 30px !important; /* مسافة بسيطة بين اللوجو والأزرار */
-cursor: pointer !important;
-}
