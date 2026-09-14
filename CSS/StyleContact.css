@@ -155,11 +155,11 @@ header {
 
 /* /////////////////// Start Contact */
 .contact-section {
-    background-color: #e5f3fa;
+    background-color: var(bg2);
 }
 
 .section-title {
-    color: #11a2d7;
+    color: var(--font1);
     font-weight: 700;
     font-size: 18px;
     margin-top: 50px;
@@ -167,20 +167,23 @@ header {
 }
 
 .contact-section h1 {
-    color: #2e4493;
+    color: var(--color-btn);
     font-weight: 700;
 }
-
+p.text-muted{
+    color:var(--pColor) !important;
+}
 .contact-card {
     display: block;
     text-align: center;
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 35px 20px;
     border-radius: 12px;
     transition: 0.3s;
     height: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
+
 
 .contact-card:hover {
     transform: translateY(-8px);
@@ -205,12 +208,12 @@ header {
 }
 
 .contact-card p {
-    color: #777;
+    color: #cbc7c7;
     margin-bottom: 0;
 }
 
 .contact-form {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
