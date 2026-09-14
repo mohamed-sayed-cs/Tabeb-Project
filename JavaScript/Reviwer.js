@@ -1,268 +1,190 @@
-//function () {
-  //"use strict";}
+// ============================================================
+// Tabeeb Platform — Main JavaScript Logic
+// ============================================================
 
-  /* ---------- Footer year ---------- */
-  document.getElementById("year").textContent = new Date().getFullYear();
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Mobile nav ---------- */
-  const navToggle = document.getElementById("navToggle");
-  const mainNav = document.getElementById("mainNav");
-  navToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-  mainNav.querySelectorAll("a").forEach((link) =>
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    })
-  );
+    /* ------------------------------------------------------------
+       1. Mobile Navigation Toggle
+    ------------------------------------------------------------ */
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
 
-  /* ---------- "احجز الكشف" buttons -> scroll to contact ---------- */
-  ["bookBtn", "bookBtnHero"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("click", () => {
-        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+      });
+
+      // Close mobile menu when clicking any nav link
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('nav-open');
+        });
       });
     }
-  });
 
-  /* =========================================================
-     Reviews: seed data + anything saved locally by this browser
-  ========================================================= */
-  const STORAGE_KEY = "nabd_clinic_reviews_v1";
+    /* ------------------------------------------------------------
+       2. Mock Reviews & Dynamic Rating Calculation
+    ------------------------------------------------------------ */
+    let reviewsData = [
+      { name: 'Ahmed Mahmoud', rating: 5, text: 'Very accurate diagnosis and excellent care from the doctor. The treatment was highly effective.', date: 'September 10, 2026' },
+      { name: 'Sarah Ali', rating: 5, text: 'The platform made booking the appointment and follow-up so seamless without any waiting time.', date: 'September 02, 2026' },
+      { name: 'Mohamed Mostafa', rating: 4, text: 'Well-equipped clinic and great integrated services. Outstanding overall experience.', date: 'August 25, 2026' }
+    ];
 
-  const seedReviews = [
-    {
-      name: "سارة محمود",
-      rating: 5,
-      comment: "الدكتور بيدّيك وقت كويس ويسمعك كويس، مش زي أي كشف تاني اتعوّدنا عليه.",
-      tags: ["ممتاز", "أكيد"],
-    },
-    {
-      name: "أحمد فتحي",
-      rating: 4,
-      comment: "المتابعة مع السكر بقت أسهل بكتير بعد ما بدأت أروح هنا.",
-      tags: ["جيد", "أكيد"],
-    },
-    {
-      name: "منى السيد",
-      rating: 5,
-      comment: "الانتظار كان معقول والتقرير اللي اخدته بعد الكشف كان واضح جداً.",
-      tags: ["معقولة", "ممتاز"],
-    },
-  ];
+    const reviewsList = document.getElementById('reviewsList');
+    const avgRatingNumber = document.getElementById('avgRatingNumber');
+    const reviewsCountText = document.getElementById('reviewsCountText');
+    const heroRatingValue = document.getElementById('heroRatingValue');
 
-  function loadStoredReviews() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      return raw ? JSON.parse(raw) : [];
-    } catch (e) {
-      return [];
-    }
-  }
+    function renderReviews() {
+      if (!reviewsList) return;
 
-  function saveStoredReviews(list) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-    } catch (e) {
-      /* storage might be unavailable — fail silently, review still shows for this session */
-    }
-  }
+      reviewsList.innerHTML = '';
+      let totalScore = 0;
 
-  function avatarUrl(name) {
-    const encoded = encodeURIComponent(name || "زائر");
-    return "https://ui-avatars.com/api/?name=${encoded}&background=E7F0EE&color=1F5C55&bold=true&size=96";
-  }
+      reviewsData.forEach(rev => {
+        totalScore += rev.rating;
+        const starsHtml = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
 
-  function starString(rating) {
-    return "★".repeat(rating) + "☆".repeat(5 - rating);
-  }
-
-  function renderReviews() {
-    const list = document.getElementById("reviewsList");
-    const stored = loadStoredReviews();
-    const all = [...stored, ...seedReviews]; // newest user reviews first
-
-    list.innerHTML = all
-      .map((r) => {
-        const tags = (r.tags || [])
-          .filter(Boolean)
-          .map((t) => <span>${escapeHtml(t)}</span>)
-          .join("");
-        return 
-        <article class="review-card">
-          <div class="review-top">
-            <img class="review-avatar" src="${avatarUrl(r.name)}" alt="" width="42" height="42" loading="lazy">
-            <div>
-              <div class="review-name">${escapeHtml(r.name || "زائر العيادة")}</div>
-              <div class="review-stars" aria-label="${r.rating} من ٥">${starString(r.rating)}</div>
-            </div>
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        card.innerHTML = 
+          `<div class="review-header">
+            <strong>${rev.name}</strong>
+            <span class="stars">${starsHtml}</span>
           </div>
-          ${r.comment ? <p class="review-comment">${escapeHtml(r.comment)}</p> : ""}
-          ${tags ? <div class="review-tags">${tags}</div> : ""}
-        </article>;
-      })
-      .join("");
-
-    updateAverage(all);
-  }
-
-  function updateAverage(all) {
-    const count = all.length;
-    const avg = count ? all.reduce((sum, r) => sum + r.rating, 0) / count : 0;
-    const rounded = Math.round(avg * 10) / 10;
-
-    document.getElementById("avgRatingNumber").textContent = rounded.toFixed(1);
-    document.getElementById("ratingCount").textContent = count;
-    document.getElementById("heroRatingValue").textContent = rounded.toFixed(1);
-  }
-
-  function escapeHtml(str) {
-    const div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
-  }
-  renderReviews();
-
-  /* =========================================================
-     Rating modal
-  ========================================================= */
-  const overlay = document.getElementById("modalOverlay");
-  const modal = document.getElementById("rateModal");
-  const steps = modal.querySelectorAll(".modal-step");
-  const dots = modal.querySelectorAll(".modal-progress .dot");
-
-  const state = {
-    rating: 0,
-    answers: { wait: null, staff: null, recommend: null },
-  };
-
-  let lastFocused = null;
-
-  function openModal() {
-    lastFocused = document.activeElement;
-    overlay.hidden = false;
-    goToStep(1);
-    const firstStar = modal.querySelector(".star");
-    if (firstStar) firstStar.focus();
-    document.addEventListener("keydown", onKeydown);
-  }
-
-  function closeModal() {
-    overlay.hidden = true;
-    document.removeEventListener("keydown", onKeydown);
-    if (lastFocused) lastFocused.focus();
-    resetModal();
-  }
-
-  function onKeydown(e) {
-    if (e.key === "Escape") closeModal();
-  }
-
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) closeModal();
-  });
-  document.getElementById("modalClose").addEventListener("click", closeModal);
-
-  ["fabRate", "rateBtnHero", "rateBtnReviews"].forEach((id) => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener("click", openModal);
-  });
-
-  function goToStep(stepKey) {
-    steps.forEach((s) => {
-      s.hidden = s.dataset.step !== String(stepKey);
-    });
-    dots.forEach((d) => {
-      d.classList.toggle("active", Number(d.dataset.step) <= Number(stepKey));
-      d.style.display = stepKey === "thanks" ? "none" : "";
-    });
-  }
-
-  /* --- Step 1: stars --- */
-  const starPicker = document.getElementById("starPicker");
-  const stars = Array.from(starPicker.querySelectorAll(".star"));
-  const toStep2Btn = document.getElementById("toStep2");
-
-  function paintStars(value) {
-    stars.forEach((s) => {
-      const active = Number(s.dataset.value) <= value;
-      s.classList.toggle("active", active);
-      s.setAttribute("aria-checked", String(Number(s.dataset.value) === value));
-    });
-  }
-
-  stars.forEach((s) => {
-    s.addEventListener("click", () => {
-      state.rating = Number(s.dataset.value);
-      paintStars(state.rating);
-      toStep2Btn.disabled = false;
-    });
-    s.addEventListener("mouseenter", () => {
-      stars.forEach((h) => h.classList.toggle("hovered", Number(h.dataset.value) <= Number(s.dataset.value)));
-    });
-    s.addEventListener("mouseleave", () => {
-      stars.forEach((h) => h.classList.remove("hovered"));
-    });
-  });
-
-  toStep2Btn.addEventListener("click", () => goToStep(2));
-  document.getElementById("toStep1").addEventListener("click", () => goToStep(1));
-
-  /* --- Step 2: quick questions --- */
-  const toStep3Btn = document.getElementById("toStep3");
-
-  document.querySelectorAll(".quick-question").forEach((block) => {
-    const key = block.dataset.question;
-    block.querySelectorAll(".chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        block.querySelectorAll(".chip").forEach((c) => c.classList.remove("selected"));
-        chip.classList.add("selected");
-        state.answers[key] = chip.dataset.value;
-        checkStep2Complete();
+          <p>${rev.text}</p>
+          <span class="review-date">${rev.date}</span>`
+        ;
+        reviewsList.appendChild(card);
       });
-    });
-  });
 
-  function checkStep2Complete() {
-    const done = Object.values(state.answers).every((v) => v !== null);
-    toStep3Btn.disabled = !done;
-  }
+      // Calculate & update average rating and total review count
+      const avg = (totalScore / reviewsData.length).toFixed(1);
+      if (avgRatingNumber) avgRatingNumber.textContent = avg;
+      if (heroRatingValue) heroRatingValue.textContent = avg;
+      if (reviewsCountText) reviewsCountText.textContent = `Based on ${reviewsData.length} service reviews`;
+    }
 
-  toStep3Btn.addEventListener("click", () => goToStep(3));
-  document.getElementById("toStep2Back").addEventListener("click", () => goToStep(2));
-
-  /* --- Step 3: submit --- */
-  document.getElementById("submitReview").addEventListener("click", () => {
-    const name = document.getElementById("reviewName").value.trim();
-    const comment = document.getElementById("reviewComment").value.trim();
-
-    const newReview = {
-      name: name || "زائر العيادة",
-      rating: state.rating,
-      comment,
-      tags: [state.answers.wait, state.answers.staff, state.answers.recommend].filter(Boolean),
-      date: new Date().toISOString(),
-    };
-    const stored = loadStoredReviews();
-    stored.unshift(newReview);
-    saveStoredReviews(stored);
     renderReviews();
 
-    goToStep("thanks");
+    /* ------------------------------------------------------------
+       3. Rating & Review Modal Logic
+    ------------------------------------------------------------ */
+    const modalOverlay = document.getElementById('ratingModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalSteps = document.querySelectorAll('.modal-step');
+    const dots = document.querySelectorAll('.modal-progress .dot');
+
+    // جميع الأزرار التي تفتح النافذة المنبثقة للتقييم
+    const triggerButtons = [
+      document.getElementById('openRatingModal'),
+      document.getElementById('rateBtnReviews'),
+      document.getElementById('fabRate')
+    ];
+
+    let currentStep = 1;
+    let selectedRating = 0;
+    let selectedTag = '';
+
+    function showStep(stepNumber) {
+      currentStep = stepNumber;
+      modalSteps.forEach(step => {
+        const stepAttr = step.dataset.step;
+        step.hidden = (stepAttr !== String(stepNumber));
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx + 1 === stepNumber);
+      });
+    }
+
+    function openModal() {
+      if (!modalOverlay) return;
+      modalOverlay.hidden = false;
+      showStep(1);
+    }
+
+    triggerButtons.forEach(btn => {
+      if (btn) btn.addEventListener('click', openModal);
+    });
+
+    if (closeModalBtn && modalOverlay) {
+      closeModalBtn.addEventListener('click', () => {
+        modalOverlay.hidden = true;
+      });
+
+      // Close modal when clicking on background overlay
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) modalOverlay.hidden = true;
+      });
+    }
+
+    // Star Rating Selection (Step 1)
+    const starBtns = document.querySelectorAll('.star-picker .star');
+    starBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedRating = parseInt(btn.dataset.value);
+
+        starBtns.forEach(s => {
+          const val = parseInt(s.dataset.value);
+          s.classList.toggle('active', val <= selectedRating);
+        });
+
+        // Automatically move to Step 2 upon selection
+        setTimeout(() => showStep(2), 250);
+      });
+    });
+
+    // Chip Selection (Tags)
+    const chips = document.querySelectorAll('.chip-group .chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        selectedTag = chip.textContent;
+      });
+    });
+
+    // Proceed to Step 3 Button
+    const goToStep3Btn = document.getElementById('goToStep3');
+    if (goToStep3Btn) {
+      goToStep3Btn.addEventListener('click', () => showStep(3));
+    }
+
+    // Final Review Form Submission
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+      reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('reviewerName')?.value.trim();
+        const textInput = document.getElementById('reviewerComment')?.value.trim();
+
+        const newReview = {
+          name: nameInput || 'Anonymous Guest',
+          rating: selectedRating || 5,
+          text: selectedTag ? `[${selectedTag}] ${textInput || ''}` : (textInput || 'Great service!'),
+          date: 'Just now'
+        };
+
+        reviewsData.unshift(newReview);
+        renderReviews();
+
+        showStep(4); // Show Thank You Step
+
+        // Auto close modal after 2.5 seconds
+        setTimeout(() => {
+          if (modalOverlay) modalOverlay.hidden = true;
+          reviewForm.reset();
+          starBtns.forEach(s => s.classList.remove('active'));
+          chips.forEach(c => c.classList.remove('selected'));
+          selectedRating = 0;
+          selectedTag = '';
+        }, 2500);
+      });
+    }
+
   });
-
-  document.getElementById("closeThanks").addEventListener("click", closeModal);
-
-  function resetModal() {
-    state.rating = 0;
-    state.answers = { wait: null, staff: null, recommend: null };
-    paintStars(0);
-    toStep2Btn.disabled = true;
-    toStep3Btn.disabled = true;
-    document.querySelectorAll(".chip.selected").forEach((c) => c.classList.remove("selected"));
-    document.getElementById("reviewName").value = "";
-    document.getElementById("reviewComment").value = "";
-  }
+}
