@@ -1,6 +1,10 @@
 
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .signup-form {
     background: rgba(10, 25, 47, 0.85);
@@ -69,14 +73,11 @@
     background-color: #0369a1;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,3 +88,19 @@ body {
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 1.2rem; /* تقليل البادنج عشان الزرار والكارت يبقوا ظاهرين */
+        max-width: 95%;   /* استغلال عرض الشاشة بشكل متناسق */
+    }
+    
+    .signup-form h2 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .radio-group, .input-group {
+        margin-bottom: 0.8rem;
+    }
+}
+

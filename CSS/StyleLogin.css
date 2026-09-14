@@ -5,7 +5,8 @@
 }
 
 body {
-    height: 100vh;
+min-height: 100vh;
+padding: 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,5 +131,49 @@ body {
     cursor: pointer;
     width: 15px;
     height: 15px;
+}
+/* ضبط التجاوب للشاشات الصغيرة والموبايل */
+@media (max-width: 480px) {
+    .login-form {
+        padding: 1.5rem 1.2rem; /* تقليل البادنج داخل الكارت لإعطاء مساحة أكبر */
+        max-width: 100%;        /* استغلال عرض شاشة الموبايل بالكامل */
+    }
+
+    .login-form h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .role-selection {
+        padding: 6px;
+        margin-bottom: 1rem;
+        gap: 8px;
+    }
+
+    .role-option {
+        font-size: 0.85rem;
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-form button {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ضبط التجاوب للآيباد والتابلت */
+@media (min-width: 481px) and (max-width: 820px) {
+    .login-form {
+        padding: 2rem;
+        max-width: 360px;
+    }
 }
 

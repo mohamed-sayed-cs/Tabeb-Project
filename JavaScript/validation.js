@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    (Regex)
+    //(Regex)
     let phoneRegex = /^[0-9]+$/; // أرقام فقط
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/; // إيميل صحيح
 
