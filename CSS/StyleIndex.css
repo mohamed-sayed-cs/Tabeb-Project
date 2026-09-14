@@ -490,3 +490,50 @@ footer h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* End Footer */
+header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 15px 30px !important;
+    box-sizing: border-box !important; /* ده السطر السحري اللي بيمنع خروج العناصر بره الشاشة */
+    position: relative !important;
+}
+
+header .navigation {
+    order: 2 !important;
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-left: auto !important;
+    margin-right: 450px !important;
+}
+
+
+header .navigation a {
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    transition: color 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+
+
+/* التلوين بالأزرق فقط عند الوقوف بالماوس */
+header .navigation a:hover {
+    color: #007bff !important;
+}
+
+header .right-section {
+    order: 1 !important;
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-left: 30px !important; /* مسافة بسيطة بين اللوجو والأزرار */
+cursor: pointer !important;
+}
