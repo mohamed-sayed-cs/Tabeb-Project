@@ -1,24 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 :root {
-    --royal-blue: #2e4493;
-    --light-blue: #11a2d7;
-    --dark-navy: #131a2f;
-    --light-bg: #e5f3fa;
+  
+    --bg-nav:#FFFFFF;
+    --color-btn:#2E4493;
+    --btn-color:#ffffff;
+    --font-colornav:black;
+    --btn1:white;
+    --bg:#8DC1CD;
+    --font-colorbg:#263F5E;
+    --font-colorbtbg:#263F5E;
+    --bg2:#e5f3fa;
+    --font1:#13C5DD;
+    --font2:#1D2A4D;
+    --font3:#1D2A4D;
+    --bg3:#d9e8eb;
+    --bg-footer:#1A233A;
+    --footer-color:#13C5DD;
+    --footer-color2:#a0a6b5;
+    --bg-footer2:#111827;
+    --footer-links-color:#a0a6b5;
+    --btn-color2: #0b0b0b;
+    --pColor:rgb(13, 13, 13);
+    --card-bg:rgb(255, 255, 255);
 
-    --white: #ffffff;
-    --text-gray: #64748b;
-    --border: #dbe7ee;
-
-    --shadow-sm: 0 5px 20px rgba(19, 26, 47, 0.06);
-    --shadow-md: 0 15px 40px rgba(19, 26, 47, 0.10);
-
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 24px;
-
-    --transition: 0.3s ease;
 }
+
+
+    /* start-darkMode */
+body.dark-mode {
+    --bg-nav: #0a0a0a;         
+    --color-btn: #eff4fd;    
+    --btn-color: #000000;  
+    --btn1:rgb(3, 3, 3);     
+    --font-colornav: #fef8f8;   
+    --bg: #000000;             
+    --font-colorbg: #f9f2f2;   
+    --bg2: #000101;             
+    --font1: #f3f3f3;          
+    --font2: #dbe4ef;           
+    --font3: #f1f3f6;         
+    --bg3: #0b0f19;             
+    --bg-footer: #020617;      
+    --footer-color: #38bdf8; 
+    --footer-color2: #9ca3af;   
+    --bg-footer2: #030712;      
+    --footer-links-color: #9ca3af; 
+    --btn-color2: gold;
+    --pColor:rgb(230, 230, 230);
+    --card-bg:rgb(93, 87, 87);
+}
+
+
+.toggle-button {
+    margin-left:30px;
+    background: none;
+    border:none;
+    color: var(--btn-color2);
+}
+
+         /* end-darkMode-btn */
 
 * {
     margin: 0;
@@ -62,7 +103,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #ffff;
+    background-color: var(--bg-nav);
     box-shadow: 0 2px 10px rgba(19, 26, 47, 0.06);
     position: fixed;
     width: 100%;
@@ -77,8 +118,8 @@ header {
 }
 
 .logo-box {
-    background-color: #2e4493;
-    color: var(--white);
+    background-color: var(--color-btn);
+    color: var(--btn-color);
     width: 42px;
     height: 42px;
     border-radius: 10px;
@@ -91,7 +132,7 @@ header {
 .logo {
     font-size: 30px;
     font-weight: 900;
-    color: #2e4493;
+    color: var(--color-btn);
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -104,7 +145,7 @@ header {
 
 .navigation a {
     text-decoration: none;
-    color: #131a2f;
+    color: var(--font-colornav);
     font-weight: 600;
     font-size: 18px;
     padding-bottom: 5px;
@@ -127,8 +168,8 @@ header {
 
 .login-btn a {
     text-decoration: none;
-    background-color: #2e4493;
-    color: var(--white);
+    background-color: var(--color-btn);
+    color: var(--btn-color);
     padding: 10px 24px;
     border-radius: 10px;
     font-weight: 600;
@@ -172,7 +213,7 @@ header {
     height: 100vh;
 }
 .main h1{
-    color: #263f5e;
+    color: var(--font-colorbg);
     font-size: 70px;
     font-weight: 700;
     display: grid;
@@ -180,13 +221,13 @@ header {
 }
 
 .main h2{
-    color: #263f5e;
+    color: var(--font-colorbg);
     font-size: 2em;
     font-weight: 500;
 }
 
 .main p{
-    color: #263f5e;
+    color: var(--font-colorbg) ;
     font-size: 1.2em;
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -200,8 +241,8 @@ header {
 }
 
 .btn1 {
-    background:#2e4493;
-    color: #ffff;
+    background:var(--color-btn);
+    color: var(--btn-color);
     padding: 11px 22px;
     border-radius: 15px;
     font-size: 20px;
@@ -212,8 +253,8 @@ header {
 }
 
 .btn2{
-    background:#2e4493;
-    color: #ffff;
+    background:var(--color-btn);
+    color: var(--btn-color);
     padding: 11px 22px;
     border-radius: 15px;
     font-size: 20px;
@@ -244,7 +285,7 @@ header {
 .section2
 {
     padding: 120px 70px;
-    background-color: #e5f3fa;
+    background-color: var(--bg2);
 }
 .left-section
 {
@@ -266,7 +307,7 @@ header {
 }
 .About
 {
-    color: #13C5DD;
+    color: var(--font1);
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -275,10 +316,13 @@ header {
 }
 .right-section h1
 {
-    color: #1D2A4D;
+    color: var(--font2);
     font-size: 56px;
     line-height: 67px;
     font-weight: 700;
+}
+.right-section p.text-muted{
+    color:var(--pColor) !important;
 }
 /* End About Section */ 
 
@@ -287,7 +331,7 @@ header {
 body{
     padding:0px;
     margin:0px;
-    background-color:#d9e8eb;
+    background-color:var(--bg3);
     height:100vh;
 }
     /* edite card */
@@ -321,13 +365,13 @@ body{
 /* Start Footer */
 
 footer {
-    background-color:#1a233a ; 
-    color: #a0a6b5; 
+    background-color:var(--bg-footer); 
+    color: var(--footer-color2); 
     font-family: Arial, sans-serif;
     margin-top: 50px;
     bottom: 0;
-position: relative;
-width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -345,7 +389,7 @@ footer.footer-col {
 
 
 footer h3 {
-    color: #13c5dd; 
+    color:var(--footer-color); 
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
@@ -362,7 +406,7 @@ footer h3 {
 }
 
 .contact-details i {
-    color: #13c5dd;
+    color: var(--footer-color);
 }
 
 
@@ -377,7 +421,7 @@ footer h3 {
 }
 
 .footer-links a {
-    color: #a0a6b5;
+    color: var(--footer-color2);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -386,7 +430,7 @@ footer h3 {
 }
 
 .footer-links a:hover {
-    color: #13c5dd;
+    color: var(--footer-color);
 }
 .newsletter {
     display: flex;
@@ -401,8 +445,8 @@ footer h3 {
 }
 
 .newsletter button {
-    background-color: #13c5dd;
-    color: white;
+    background-color:var(--footer-color);
+    color: var(--bg-nav);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -425,16 +469,16 @@ footer h3 {
     align-items: center;
     width: 35px;
     height: 35px;
-    background-color: #13c5dd;
-    color: white;
+    background-color: var(--footer-color);
+    color: var(--bg-nav);
     border-radius: 50%;
     text-decoration: none;
     transition: 0.3s ease;
 }
 
 .social-links a:hover {
-    background-color: white;
-    color: #13c5dd;
+    background-color: var(--bg-nav);
+    color: var(--footer-color);
 }
 
 
@@ -442,7 +486,7 @@ footer h3 {
     background-color: #111827; 
     text-align: left;
     padding: 1.5rem 10%;
-    color: #a0a6b5;
+    color: var(--footer-color);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* End Footer */

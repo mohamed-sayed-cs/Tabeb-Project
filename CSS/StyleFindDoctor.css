@@ -153,93 +153,63 @@ header {
 /* ///////////////////////////////////////////////////////////////// */
 
 
-/* /////////////////// Start Contact */
-.contact-section {
-    background-color: var(bg2);
+
+/* Start Search Section */
+
+.search-section {
+    background-color: #e5f3fa;
+    min-height: 100vh;
+    padding: 160px 0;
 }
 
 .section-title {
-    color: var(--font1);
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 50px;
-    margin-bottom: 8px;
-}
-
-.contact-section h1 {
-    color: var(--color-btn);
-    font-weight: 700;
-}
-p.text-muted{
-    color:var(--pColor) !important;
-}
-.contact-card {
-    display: block;
-    text-align: center;
-    background-color: var(--card-bg);
-    padding: 35px 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-    height: 100%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-
-.contact-card:hover {
-    transform: translateY(-8px);
-}
-
-.contact-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background-color: #e5f8fc;
     color: #11a2d7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.contact-card h4 {
+.search-box {
+    max-width: 650px;
+}
+
+.search-box input {
+    height: 55px;
+    border-radius: 12px;
+    padding: 0 20px;
+    font-size: 17px;
+    border: 1px solid #e5f3fa;
+}
+
+.search-box input:focus {
+    border-color: #11a2d7;
+    box-shadow: 0 0 0 3px rgba(17, 162, 215, 0.15);
+}
+
+.doctor-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(19, 26, 47, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.doctor-name {
     color: #1d2a4d;
     font-weight: 700;
 }
 
-.contact-card p {
-    color: #cbc7c7;
-    margin-bottom: 0;
+.doctor-specialty {
+    color: #11a2d7;
 }
-
-.contact-form {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-}
-
-.contact-form h2 {
-    color: #2e4493;
-    font-weight: 700;
-}
-
-.form-control {
-    padding: 12px 15px;
-    border-radius: 8px;
-}
-
-.form-control:focus {
-    border-color: #11a2d7;
-    box-shadow: 0 0 0 0.2rem rgba(19, 197, 221, 0.15);
-}
-
-.btn-primary {
-    background-color: #11a2d7;
-    border-color: #11a2d7;
-}
-
-.btn-primary:hover {
-    background-color: #0daec4;
-    border-color: #0daec4;
-}
-/* ///////// End Contact */

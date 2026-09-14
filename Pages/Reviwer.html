@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabeeb Platform — Dr. Omar Rashed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/Reviwer.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">T</span>
+      <span class="brand-text">Tabeeb</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#about">About Doctor</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Patient Reviews</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn btn-primary" id="bookBtn">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>A doctor who listens carefully before prescribing treatment</h1>
+        <p class="hero-lead">
+          Tabeeb platform offers internal medicine and family healthcare with precise appointments and ample time for all your questions. No rush, and no prescriptions without understanding your condition first.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" id="bookBtnHero">Book Appointment</button>
+          <button class="btn btn-ghost btn-lg" id="openRatingModal">Rate Your Visit ⭐</button>
+        </div>
+
+        <dl class="hero-stats">
+          <div class="stat">
+            <dt>Years of Experience</dt>
+            <dd>14+</dd>
+          </div>
+          <div class="stat">
+            <dt>Patients Treated</dt>
+            <dd>3,200+</dd>
+          </div>
+          <div class="stat">
+            <dt>Patient Rating</dt>
+            <dd id="heroRatingValue">4.8</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1758691461513-88a0aef72160?auto=format&fit=crop&w=900&q=80"
+          alt="Dr. Omar Rashed - Tabeeb Platform"
+          width="900" height="1125" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img
+          src="https://images.unsplash.com/photo-1758691461935-202e2ef6b69f?auto=format&fit=crop&w=900&q=80"
+          alt="Dr. Omar Rashed consulting with a patient"
+          width="900" height="600" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <h2>Dr. Omar Rashed</h2>
+        <p class="about-role">Consultant of Internal Medicine & Family Healthcare at Tabeeb Clinics</p>
+        <p>
+          Graduate of Kasr Al-Ainy Faculty of Medicine, having served in emergency and internal medicine units for over 14 years before joining Tabeeb platform. He believes medical examination is not just a quick prescription, but an opportunity to properly diagnose your condition and explain everything clearly.
+        </p>
+        <ul class="credentials">
+          <li>Member of the Egyptian Society of Internal Medicine</li>
+          <li>Diploma in Diabetes & Endocrinology Care</li>
+          <li>Continuous training in modern Family Medicine</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- ===== Services ===== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>What We Offer at Tabeeb</h2>
+        <p>Essential medical services covering all your family's needs without complexity.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 3v7a6 6 0 0 0 12 0V3M12 21v-4M9 21h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="19" cy="6" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <h3>General Internal Medicine</h3>
+          <p>Symptom monitoring and accurate diagnosis for all medical conditions.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Chronic Disease Care</h3>
+          <p>Diabetes, hypertension, and cholesterol management with clear treatment plans.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.7 9 2.4 5 6 5c2 0 3.3 1.1 4 2.2C10.7 6.1 12 5 14 5c3.6 0 5.3 4 3.5 7.5C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Family Healthcare</h3>
+          <p>Comprehensive care for all family members, from children to seniors.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Instant Labs & Imaging</h3>
+          <p>Direct coordination with trusted diagnostic labs and imaging centers.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20l1-4.8a8.4 8.4 0 0 1-1-4A8.5 8.5 0 0 1 12 3a8.38 8.38 0 0 1 9 8.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Online Consultations</h3>
+          <p>Quick remote follow-ups via Tabeeb platform for non-emergency visits.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6l1 2h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2l1-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 13 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Detailed Medical Reports</h3>
+          <p>Clear written summary after every checkup for your personal records.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Patient Feedback</h2>
+        <p>Real reviews from patients verified through Tabeeb platform.</p>
+      </div>
+
+      <div class="reviews-summary">
+        <div class="rating-big">
+          <span id="avgRatingNumber">4.8</span>
+          <div class="stars-static" aria-hidden="true">★★★★★</div>
+          <span class="rating-count" id="reviewsCountText">Based on 3 service reviews</span>
+        </div>
+
+        <button class="btn btn-outline" id="rateBtnReviews">Share Your Feedback</button>
+      </div>
+      <div class="reviews-list" id="reviewsList">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact / Footer ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">T</span>
+          <span class="brand-text">Tabeeb</span>
+        </div>
+        <p class="footer-note">Internal Medicine & Family Care — Dr. Omar Rashed</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Clinic Location</h4>
+        <p>12 Al-Nasr St, Maadi, Cairo</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p dir="ltr">+20 100 123 4567</p>
+        <p>info@tabeeb.example</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Working Hours</h4>
+        <p>Saturday – Thursday: 5 PM – 10 PM</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Tabeeb Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ===== Floating rate button ===== -->
+<button class="fab" id="fabRate" aria-haspopup="dialog">
+  <span class="fab-icon" aria-hidden="true">★</span>
+  <span class="fab-label">Rate Visit</span>
+</button>
+
+<!-- ===== Rating Modal ===== -->
+<div class="modal-overlay" id="ratingModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+
+    <div class="modal-progress">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- Step 1: overall rating -->
+    <section class="modal-step" data-step="1">
+      <h3 id="modalTitle">Rate Your Visit</h3>
+      <p class="modal-sub">Select stars to reflect your experience.</p>
+      <div class="star-picker" role="radiogroup">
+        <button type="button" class="star" data-value="1" aria-label="1 star">★</button>
+        <button type="button" class="star" data-value="2" aria-label="2 stars">★</button>
+        <button type="button" class="star" data-value="3" aria-label="3 stars">★</button>
+        <button type="button" class="star" data-value="4" aria-label="4 stars">★</button>
+        <button type="button" class="star" data-value="5" aria-label="5 stars">★</button>
+      </div>
+    </section>
+
+    <!-- Step 2: quick questions -->
+    <section class="modal-step" data-step="2" hidden>
+      <h3>Quick Feedback</h3>
+      <p class="modal-sub">Your feedback helps us improve.</p>
+
+      <div class="quick-question">
+        <p>How was the waiting time?</p>
+        <div class="chip-group">
+          <button type="button" class="chip">Short</button>
+          <button type="button" class="chip">Reasonable</button>
+          <button type="button" class="chip">Long</button>
+        </div>
+      </div>
+
+      <div class="quick-question">
+        <p>How was the staff behavior?</p>
+        <div class="chip-group">
+          <button type="button" class="chip">Excellent</button>
+          <button type="button" class="chip">Good</button>
+          <button type="button" class="chip">Needs Improvement</button>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="goToStep3">Continue</button>
+      </div>
+    </section>
+
+    <!-- Step 3: comment + submit -->
+    <section class="modal-step" data-step="3" hidden>
+      <h3>Add a Comment</h3>
+      <p class="modal-sub">Optional — share additional details.</p>
+
+      <form id="reviewForm">
+        <label class="field">
+          <span>Your Name (Optional)</span>
+          <input type="text" id="reviewerName" placeholder="e.g. Sarah Mahmoud" maxlength="40">
+        </label>
+
+        <label class="field">
+          <span>Your Comment (Optional)</span>
+          <textarea id="reviewerComment" rows="3" maxlength="240" placeholder="Write your review here..."></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Step 4: Thank you -->
+    <section class="modal-step modal-thanks" data-step="4" hidden>
+      <div class="thanks-icon" aria-hidden="true">✓</div>
+      <h3>Thank You!</h3>
+      <p class="modal-sub">Your feedback has been received successfully.</p>
+    </section>
+
+  </div>
+</div>
+
+<script src="../JavaScript/Reviwer.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/StyleProfileDoctor.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <div class="card shadow border-0 cardDoctor">
+            <div class="card-body p-4">
+
+                <div class="row align-items-center">
+
+                    <div class="col-12 col-lg-4 text-center">
+                        <img src="../../Images/Doctor4.jpg" class="doctor-image" alt="Doctor. Karim Hassan">
+                    </div>
+
+                    <div class="col-12 col-lg-8">
+
+                        <h1 id="doctorName">Dr. Karim Hassan</h1>
+
+                        <p class="text-primary fs-5" id="specialty">
+                            Cardiologist
+                        </p>
+
+                        <div class="rating-circle">
+                            <span id="rating">4.8</span>
+                        </div>
+
+                        <h5 class="mt-4">
+                            Oral and Dental Medicine Specialist
+                        </h5>
+                        <p class="mt-4">
+                            Experienced doctor specialized in providing
+                            professional medical care and diagnosis.
+                        </p>
+
+                        <div class="row mt-4">
+
+                            <div class="col-3 col-lg-6">
+                                <strong>Consultation Fee</strong>
+                                <p id="price">300 EGP</p>
+                            </div>
+
+                            <div class="col-3 col-lg-6">
+                                <strong>Clinic Location</strong>
+                                <p id="location">Nasr City, Cairo</p>
+                            </div>
+
+                            <div class="col-3 col-lg-6">
+                                <strong>Experience</strong>
+                                <p>10 Years</p>
+                            </div>
+
+                            <div class="col-3 col-lg-6">
+                                <strong>Patients</strong>
+                                <p>1200+ Patients</p>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <h4>Available Appointments</h4>
+
+                        <div class="d-flex gap-2 flex-wrap mt-3">
+
+                            <button class="btn btn-outline-primary appointment">
+                                10:00 AM
+                            </button>
+
+                            <button class="btn btn-outline-primary appointment">
+                                12:00 PM
+                            </button>
+
+                            <button class="btn btn-outline-primary appointment">
+                                04:00 PM
+                            </button>
+
+                            <button class="btn btn-outline-primary appointment">
+                                07:00 PM
+                            </button>
+
+                        </div>
+
+                        <button id="bookBtn" class="btn btn-primary mt-4 px-4">
+                            Book Appointment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../JavaScript/ProfileDoctor.js"></script>
+
+</body>
+</html>
