@@ -112,4 +112,4 @@ function openDoctorProfile(doctorId) {
         window.location.href="../Pages/ProfileDoctors/DoctorIbrahimKhalad.html";
 }
 
-// displayDoctors(doctors);
+displayDoctors(doctors);
