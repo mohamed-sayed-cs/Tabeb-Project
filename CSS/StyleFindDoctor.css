@@ -18,6 +18,15 @@
     --transition: 0.3s ease;
 }
 
+.toggle-button {
+    margin-left:30px;
+    background: none;
+    border:none;
+    color: var(--btn-color2);
+    position:absolute;
+    right:10px;
+} 
+
 * {
     margin: 0;
     padding: 0;
@@ -134,6 +143,7 @@ header {
     top: 15px;
     right: 30px;
 }
+    
 
 .login-btn a:hover {
     background-color: #11a2d7;
