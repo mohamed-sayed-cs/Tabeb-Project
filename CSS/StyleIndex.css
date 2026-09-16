@@ -23,6 +23,8 @@
     --btn-color2: #0b0b0b;
     --pColor:rgb(13, 13, 13);
     --card-bg:rgb(255, 255, 255);
+    --background-color: #11a2d7;
+    --background-color2: #e5f3fa;
 
 }
 
@@ -49,6 +51,10 @@
     --btn-color2: gold;
     --pColor:rgb(230, 230, 230);
     --card-bg:rgb(93, 87, 87);
+    --background-color: black;
+    --background-color2: gray;
+
+
 }
 
 
@@ -171,18 +177,27 @@ select {
     gap: 14px; 
 }
 
+#about .right-section a.btn-primary {
+   background-color:var(--color-btn);
+   color:var(--bg-nav);
+}
+
+
 .nav-toggle {
   display: none;
   width: 40px; height: 40px;
   border-radius: 15px;
   border: 1.5px solid var(--line);
-  background:var(--color-btn);
-  color: var(--btn-color);
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
   gap: 4px;
   cursor: pointer;
+}
+.header-actions a {
+  
+   color: var(--btn-color);
+   background-color:var(--color-btn)
 }
 
 .nav-toggle span { 
@@ -531,3 +546,4 @@ footer h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 /* End Footer */
+

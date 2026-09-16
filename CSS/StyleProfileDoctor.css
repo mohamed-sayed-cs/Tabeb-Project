@@ -1,11 +1,67 @@
+
+:root {
+  
+    --bg-nav:#FFFFFF;
+    --color-btn:#2E4493;
+    --btn-color:#ffffff;
+    --font-colornav:black;
+    --btn1:white;
+    --bg:#8DC1CD;
+    --font-colorbg:#263F5E;
+    --font-colorbtbg:#263F5E;
+    --bg2:#e5f3fa;
+    --font1:#13C5DD;
+    --font2:#1D2A4D;
+    --font3:#1D2A4D;
+    --bg3:#E5F3FA;
+    --bg-footer:#1A233A;
+    --footer-color:#13C5DD;
+    --footer-color2:#a0a6b5;
+    --bg-footer2:#111827;
+    --footer-links-color:#a0a6b5;
+    --btn-color2: #0b0b0b;
+    --pColor:rgb(13, 13, 13);
+    --card-bg:rgb(255, 255, 255);
+
+}
+
+
+    /* start-darkMode */
+ body.dark-mode {
+    --bg-nav: #0a0a0a;         
+    --color-btn: #eff4fd;    
+    --btn-color: #000000;  
+    --btn1:rgb(3, 3, 3);     
+    --font-colornav: #fef8f8;   
+    --bg: #000000;             
+    --font-colorbg: #f9f2f2;   
+    --bg2: #000101;             
+    --font1: #f3f3f3;          
+    --font2: #dbe4ef;           
+    --font3: #f1f3f6;         
+    --bg3: #0b0f19;             
+    --bg-footer: #020617;      
+    --footer-color: #38bdf8; 
+    --footer-color2: #9ca3af;   
+    --bg-footer2: #030712;      
+    --footer-links-color: #9ca3af; 
+    --btn-color2: gold;
+    --pColor:rgb(230, 230, 230);
+    --card-bg:rgb(93, 87, 87);
+}
+
+
+
+
+
 body
 {
-    background-color: #11a2d7;
+    background-color: var(--background-color);
 }
 
 .cardDoctor
 {
-    background-color: #e5f3fa;
+    background-color: var(--background-color2);
 }
 
 .doctor-image {
