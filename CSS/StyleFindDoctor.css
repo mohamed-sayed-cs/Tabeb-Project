@@ -1,22 +1,49 @@
 :root {
-    --royal-blue: #2e4493;
-    --light-blue: #11a2d7;
-    --dark-navy: #131a2f;
-    --light-bg: #e5f3fa;
-
-    --white: #ffffff;
-    --text-gray: #64748b;
-    --border: #dbe7ee;
-
-    --shadow-sm: 0 5px 20px rgba(19, 26, 47, 0.06);
-    --shadow-md: 0 15px 40px rgba(19, 26, 47, 0.10);
-
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 24px;
-
-    --transition: 0.3s ease;
+  
+    --bg-nav:#FFFFFF;
+    --color-btn:#2E4493;
+    --btn-color:#ffffff;
+    --font-colornav:black;
+    --btn1:white;
+    --bg:#8DC1CD;
+    --font-colorbg:#263F5E;
+    --font-colorbtbg:#263F5E;
+    --bg2:#e5f3fa;
+    --font1:#13C5DD;
+    --font2:#1D2A4D;
+    --font3:#1D2A4D;
+    --bg3:#d9e8eb;
+    --bg-footer:#1A233A;
+    --footer-color:#13C5DD;
+    --footer-color2:#a0a6b5;
+    --bg-footer2:#111827;
+    --footer-links-color:#a0a6b5;
+    --btn-color2: #0b0b0b;
+    --b:white;
 }
+body.dark-mode {
+    --bg-nav: #0a0a0a;         
+    --color-btn: #eff4fd;    
+    --btn-color: #ffffff;  
+    --btn1:rgb(3, 3, 3);     
+    --font-colornav: #fef8f8;   
+    --bg: #000000;             
+    --font-colorbg: #f9f2f2;   
+    --font-colorbtbg: #f5eeee;
+    --bg2: #000101;             
+    --font1: #f3f3f3;          
+    --font2: #dbe4ef;           
+    --font3: #f1f3f6;         
+    --bg3: #0b0f19;             
+    --bg-footer: #020617;      
+    --footer-color: #38bdf8; 
+    --footer-color2: #9ca3af;   
+    --bg-footer2: #030712;      
+    --footer-links-color: #9ca3af; 
+    --btn-color2: gold;
+    --b:gray;
+}
+
 
 .toggle-button {
     margin-left:30px;
@@ -67,7 +94,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #ffff;
+    background-color: var(--bg-nav);
     box-shadow: 0 2px 10px rgba(19, 26, 47, 0.06);
     position: fixed;
     width: 100%;
@@ -82,8 +109,8 @@ header {
 }
 
 .logo-box {
-    background-color: #2e4493;
-    color: var(--white);
+    background-color: var(--color-btn);
+    color:var(--btn1) ;
     width: 42px;
     height: 42px;
     border-radius: 10px;
@@ -96,7 +123,7 @@ header {
 .logo {
     font-size: 30px;
     font-weight: 900;
-    color: #2e4493;
+    color: var(--color-btn);
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -109,7 +136,7 @@ header {
 
 .navigation a {
     text-decoration: none;
-    color: #131a2f;
+    color:var(--font-colornav);
     font-weight: 600;
     font-size: 18px;
     padding-bottom: 5px;
@@ -132,8 +159,8 @@ header {
 
 .login-btn a {
     text-decoration: none;
-    background-color: #2e4493;
-    color: var(--white);
+    background-color: var(--color-btn);
+    color: var(--btn1);
     padding: 10px 24px;
     border-radius: 10px;
     font-weight: 600;
@@ -167,16 +194,18 @@ header {
 /* Start Search Section */
 
 .search-section {
-    background-color: #e5f3fa;
+    background-color:var(--bg);
     min-height: 100vh;
     padding: 160px 0;
 }
 
 .section-title {
-    color: #11a2d7;
+    color: var(--font2);
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+
 
 .search-box {
     max-width: 650px;
@@ -190,13 +219,22 @@ header {
     border: 1px solid #e5f3fa;
 }
 
+.search-section h1,
+.search-section .text-muted {
+    color: var(--font-colornav)
+    
+}
+.search-section .text-center > .text-muted {
+    color: var(--font-colornav) !important;
+}
+
 .search-box input:focus {
     border-color: #11a2d7;
     box-shadow: 0 0 0 3px rgba(17, 162, 215, 0.15);
 }
 
 .doctor-card {
-    background-color: white;
+    background-color: var(--b);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 5px 20px rgba(19, 26, 47, 0.08);
@@ -216,7 +254,7 @@ header {
 }
 
 .doctor-name {
-    color: #1d2a4d;
+    color: var(--color-btn);
     font-weight: 700;
 }
 
