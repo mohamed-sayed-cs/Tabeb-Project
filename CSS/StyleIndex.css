@@ -14,7 +14,7 @@
     --font1:#13C5DD;
     --font2:#1D2A4D;
     --font3:#1D2A4D;
-    --bg3:#d9e8eb;
+    --bg3:#E5F3FA;
     --bg-footer:#1A233A;
     --footer-color:#13C5DD;
     --footer-color2:#a0a6b5;
@@ -340,11 +340,11 @@ body{
 }
     /* edite card */
 .card{
-    max-width:300px;
+    /* max-width:300px; */
     margin:0;
 }
 .card img{
-    height:150px;
+    height:250px!important;
     object-fit:cover;
 }
         /* card-transition */
