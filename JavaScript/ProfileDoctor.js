@@ -45,5 +45,6 @@ bookButton.addEventListener("click", function() {
             selectedTime +
             "."
         );
+        window.location.href="../payment.html";
     }
 });

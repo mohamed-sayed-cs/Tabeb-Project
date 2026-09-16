@@ -54,7 +54,7 @@ function displayDoctors(doctorsList) {
 
         searchResults.innerHTML += 
             `<div class="col-12 col-md-6 col-lg-4">
-                <div class="doctor-card" onclick="openDoctorProfile(${i+1})">
+                <div class="doctor-card" onclick="openDoctorProfile(${doctor.id})">
 
                     <div class="d-flex align-items-center gap-3">
 
