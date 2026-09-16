@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="login">
-    <form class="login-form">
+    <form class="login-form" id="loginForm">
         <h2>Sign In</h2>
         <div class="role-selection">
         <label class="role-option">
-          <input type="radio" name="userRole" value="doctor" checked>
+          <input type="radio" name="role" value="doctor" checked>
           <span class="role-text">Doctor</span>
         </label>
         <label class="role-option">
-          <input type="radio" name="userRole" value="patient">
+          <input type="radio" name="role" value="patient">
           <span class="role-text">Patient</span>
         </label>
       </div>
@@ -34,5 +34,6 @@
         <button type="submit">Submit</button>
     </form>
 </div>
+<script src="../JavaScript/login.js"></script>
 </body>
 </html>
