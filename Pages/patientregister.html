@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient</title>
+</head>
+<body>
+
+
+    <style>
+            :root {
+      --bg-color: #f4f7f9;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
+      --primary: #0077b6;
+      --primary-hover: #023e8a;
+      --accent: #00b4d8;
+      --border-color: #e2e8f0;
+      --danger: #e74c3c;
+      --success: #2ecc71;
+      --warning: #f39c12;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', sans-serif;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    
+        /* Main Content Layout */
+    .main-grid {
+        display: flexbox;
+      position: center;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr 2fr;
+      gap: 25px;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      outline: none;
+      font-size: 0.95rem;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
+    .btn-submit  {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-submi:hover {
+      background: var(--primary-hover);
+    }
+
+
+    </style>
+
+    <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>🩺 New Patient Registration</h1>
+      <a href="../../Tabeb-Project/Pages/doctordashboard.html" class="btn-link">← Back to Dashboard</a>
+    </header>
+
+    <!-- Register Patient Form -->
+    <div class="main-grid">
+      <section class="card">
+        <h2>Register New Patient</h2>
+        <form id="patientForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" class="form-control" required placeholder="Example: Ahmed Mahmoud" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" required placeholder="01XXXXXXXXX" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" class="form-control" required min="1" max="120" placeholder="25" />
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" class="form-control" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="visitDate">Date and Time</label>
+            <input type="text" id="visitDate" class="form-control" readonly />
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Diagnosis & Notes</label>
+            <textarea id="notes" class="form-control" rows="3" placeholder="Patient symptoms or initial diagnosis..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Add Patient to List</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="../../Tabeb-Project/JavaScript/DoctorDashBoard.js"></script>
+</body>
+</html>

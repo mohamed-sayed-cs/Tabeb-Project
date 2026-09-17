@@ -24,3 +24,6 @@ loginForm.addEventListener("submit",  (e)=> {
         window.location.href = `../Pages/DoctorsDashBoard/Dr.${user.name}DashBoard.html`;
     }
 });
+
+
+
