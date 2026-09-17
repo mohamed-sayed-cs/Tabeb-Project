@@ -28,78 +28,76 @@
 
 
     <!-- Start NavBar -->
-    <header class="site-header">
-        <div class="container header-inner">
-                <a href="#home" class="brand">
-                <span class="brand-mark"><i class="fa-solid fa-stethoscope"></i></span>
-                <span class="brand-text">Tabeeb</span>
-                </a>
+<!-- Start NavBar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark"><i class="fa-solid fa-stethoscope"></i></span>
+        <span class="brand-text">Tabeeb</span>
+      </a>
 
-               <nav class="main-nav" id="mainNav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#services">Specialties</a>
-                <a href="./Pages/Contact.html">Contact Us</a>
-                </nav>
-            <div class="header-actions">
-                    <a href="./Pages/newuser.html" class="btn btn-primary" id="bookBtn">New User</a>
-                    <button class="nav-toggle" id="navToggle" aria-label="Open Menu" aria-expanded="false">
-                        <span></span><span></span><span></span>
-                    </button>
-                    
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#services">Specialties</a>
+        <a href="./Pages/Contact.html">Contact Us</a>
+      </nav>
 
-                    <a href="./Pages/login.html" class="btn btn-primary" id="bookBtn">Sign IN</a>
-                    <button class="nav-toggle" id="navToggle" aria-label="Open Menu" aria-expanded="false">
-                        <span></span><span></span><span></span>
-                    </button>
-                    
-            </div>
-        </div>
-            
-                <button class="toggle-button" onclick="theme()"><i class="fa-solid fa-moon"></i></button>
-    </header>
+      <div class="header-actions">
+        <a href="./Pages/newuser.html" class="btn btn-primary">New User</a>
+        <a href="./Pages/login.html" class="btn btn-primary">Sign In</a>
+        <button class="toggle-button" onclick="theme()" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open Menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- End NavBar -->
 
-
-    <!-- End NavBar -->
-
-    <!-- Start Home Section -->
-     <section id="home" class="main">
-
-        <div class="text">
-
-            <h1>
-                Welcome to Tabeeb
-            </h1>
-
-            <h2>
-                Book your medical appointment
-                <br>
-                easily and safely
-            </h2>
-
-            <p>
-                Find the best doctors and hospitals near you,
-                <br>
-                book your medical appointment in minutes with ease
-            </p>
+  <!-- Start Home Section -->
+  <section id="home" class="main">
+    <div class="text">
+      <h1>Welcome to Tabeeb</h1>
+      <h2>Book your medical appointment<br>easily and safely</h2>
+      <p>
+        Find the best doctors and hospitals near you,<br>
+        book your medical appointment in minutes with ease
+      </p>
+      <div class="btns">
+        <a href="./Pages/FindDoctor.html" class="btn1">Find Doctors</a>
+        <a href="#services" class="btn2">Explore Services</a>
+      </div>
+    </div>
+  </section>
 
 
-            <div class="btns">
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
 
-                <a href="./Pages/FindDoctor.html" class="btn1">
-                    Find Doctors
-                </a>
+    navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('is-open');
+        navToggle.classList.toggle('is-active', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen);
+    });
 
-                <a href="#services" class="btn2">
-                    Explore Services
-                </a>
+    // Close the drawer if a link is tapped
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+        mainNav.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        navToggle.setAttribute('aria-expanded', false);
+        });
+    });
 
-            </div>
-
-        </div>
-
-    </section>
+    function theme(){
+        document.body.classList.toggle('dark-mode');
+    }
+    </script>
     <!-- End Home Section -->
 
     <!-- Start About Section -->
